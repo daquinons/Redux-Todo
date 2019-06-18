@@ -1,9 +1,6 @@
 import * as actionTypes from './actionTypes';
 
-export function todosReducer(
-  state = [],
-  action
-) {
+export function todosReducer(state = [], action) {
   switch (action.type) {
     case actionTypes.ADD_TODO:
       return [...state, action.payload];
@@ -12,6 +9,8 @@ export function todosReducer(
         if (todo.id === action.payload) {
           return { ...todo, completed: !todo.completed };
         }
+
+        return todo
       });
     default:
       return state;

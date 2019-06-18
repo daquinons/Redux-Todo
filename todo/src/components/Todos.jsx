@@ -5,7 +5,6 @@ import Todo from './Todo';
 
 const Todos = props => {
   const todos = props.todos || [];
-
   return todos.map(todo => {
     return <Todo id={todo.id} value={todo.value} completed={todo.completed} toggleTodo={props.toggleTodo} />
   })
