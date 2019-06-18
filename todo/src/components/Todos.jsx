@@ -10,7 +10,7 @@ const Todos = props => {
 
 function mapStateToProps(state) {
   return {
-    todos: state.todos
+    todos: state
   };
 }
 
