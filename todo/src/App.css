@@ -31,3 +31,9 @@
     transform: rotate(360deg);
   }
 }
+
+.delete-button {
+  cursor: pointer;
+  color: lightblue;
+  font-size: 0.75rem;
+}

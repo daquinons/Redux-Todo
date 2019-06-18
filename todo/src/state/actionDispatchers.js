@@ -12,6 +12,13 @@ export const addTodo = value => {
   };
 };
 
+export const deleteTodo = id => {
+  return {
+    type: actionTypes.DELETE_TODO,
+    payload: id
+  }
+}
+
 export const toggleTodo = id => {
   return {
     type: actionTypes.TOGGLE_TODO,

@@ -5,11 +5,15 @@ const Todo = props => {
     props.toggleTodo(props.id);
   }
 
+  const deleteTodo = () => {
+    props.deleteTodo(props.id);
+  }
+
   return (
     <div>
       <p>
         <CheckBox isChecked={props.completed} handleChecked={toggleTodo}/>
-        {props.value}
+        {props.value} <span className="delete-button" onClick={deleteTodo}>Delete</span>
       </p>
     </div>
   );

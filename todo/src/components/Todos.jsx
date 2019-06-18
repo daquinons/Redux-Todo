@@ -13,6 +13,7 @@ const Todos = props => {
           value={todo.value}
           completed={todo.completed}
           toggleTodo={props.toggleTodo}
+          deleteTodo={props.deleteTodo}
         />
       </div>
     );
@@ -27,5 +28,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  { toggleTodo: actionDispatchers.toggleTodo }
+  { toggleTodo: actionDispatchers.toggleTodo, deleteTodo: actionDispatchers.deleteTodo }
 )(Todos);
