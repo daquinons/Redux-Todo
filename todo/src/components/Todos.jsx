@@ -19,5 +19,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  { addTodo: actionDispatchers.addTodo, toggleTodo: actionDispatchers.toggleTodo }
+  { toggleTodo: actionDispatchers.toggleTodo }
 )(Todos);

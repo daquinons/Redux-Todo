@@ -1,6 +1,9 @@
 import * as actionTypes from './actionTypes';
 
-export function todosReducer(state = [], action) {
+export function todosReducer(
+  state = [],
+  action
+) {
   switch (action.type) {
     case actionTypes.ADD_TODO:
       return [...state, action.payload];
