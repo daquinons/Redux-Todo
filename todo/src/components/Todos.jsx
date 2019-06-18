@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addTodo, toggleTodo } from '../state/actionDispatchers';
+import * as actionDispatchers from '../state/actionDispatchers';
 import Todo from './Todo';
 
 const Todos = props => {
   const todos = props.todos || [];
 
   return todos.map(todo => {
-    return <Todo value={todo.value} completed={todo.completed} />
+    return <Todo id={todo.id} value={todo.value} completed={todo.completed} toggleTodo={props.toggleTodo} />
   })
 };
 
@@ -19,5 +19,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  { addTodo, toggleTodo }
+  { addTodo: actionDispatchers.addTodo, toggleTodo: actionDispatchers.toggleTodo }
 )(Todos);
